@@ -32,8 +32,10 @@ import LoginPageHouse from "views/examples/LoginPageHouse.js";
 import LoginPageApp from "views/examples/LoginPageApp.js";
 import Donate from "views/examples/DonatePage.js";
 import SignUp from "views/examples/SignUp.js";
+import SignUpHouse from "views/examples/SignUpHouse.js";
+import SignUpAssoc from "views/examples/SignUpAssoc.js";
+import SignUpApp from "views/examples/SignUpApp.js";
 import LandingPage from "views/examples/LandingPage.js";
-import SignUpPage from "views/examples/SignUpPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import Dashboard from "views/examples/Dashboard.js";
 import Application from "views/examples/Application.js";
@@ -49,6 +51,9 @@ ReactDOM.render(
       <Route path="/loginAssoc" component={LoginPageAssoc} />
       <Route path="/loginHouse" component={LoginPageHouse} />
       <Route path="/loginApp" component={LoginPageApp} />
+      <Route path="/Signuphouse" component={SignUpHouse} />
+      <Route path="/Signupassoc" component={SignUpAssoc} />
+      <Route path="/Signupapp" component={SignUpApp} />
   	<Route path="/Donate" component={Donate} />
     <Route path="/volunteer" component={Application} />
     <Route path="/Signup" component={SignUp} />

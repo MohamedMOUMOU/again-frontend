@@ -63,7 +63,7 @@ function SignUp() {
                     type="submit"
                     value="Submit"
                     size="lg"
-                    to="/"
+                    to="/Singnuphouse"
                     tag={Link}
                   >
                     House donater

@@ -113,7 +113,7 @@ function ExamplesNavbar() {
                 </NavLink>
               </NavItem>
               <NavItem id="navbar-link-4">
-                <NavLink href={require("assets/img/bg-9.jpg")}>
+                <NavLink to="/Signup" tag={Link}>
                   Sign Up
                 </NavLink>
               </NavItem>

@@ -105,7 +105,7 @@ function onSubmito(event){
             backgroundImage: "url(" + require("assets/img/login.png") + ")"
           }}
         ></div>
-        <div className="content" style={ { marginBottom: -100 } }>
+        <div className="content" style={ { marginTop: 100 } }>
           <Container>
             <Col className="ml-auto mr-auto" md="5">
               <Card className="card-login card-plain">

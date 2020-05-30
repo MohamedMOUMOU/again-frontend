@@ -105,7 +105,7 @@ function onSubmito(event){
             backgroundImage: "url(" + require("assets/img/login.png") + ")"
           }}
         ></div>
-        <div className="content" style={ { marginBottom: -100 } }>
+        <div className="content" style={ { marginTop: 100 } }>
           <Container>
             <Col className="ml-auto mr-auto" md="4">
               <Card className="card-login card-plain">
@@ -115,6 +115,7 @@ function onSubmito(event){
                       <img
                         alt="..."
                         src={require("assets/img/logo.png")}
+                        style={{  }}
                       ></img>
                     </div>
                   </CardHeader>
@@ -166,6 +167,16 @@ function onSubmito(event){
           		onChange={handleInputChange}
                       ></Input>
                     </InputGroup>
+                    <Button
+                      style={ { backgroundColor: '#ff6c31' } }
+                      className="btn-round"
+                      color="success"
+                      type="submit"
+                      value="Submit"
+                      size="lg"
+                    >
+                      Login
+                    </Button>
                   </CardBody>
                   <CardFooter className="text-center">
                   <div className="pull-left">
@@ -179,16 +190,16 @@ function onSubmito(event){
                       </a>
                     </h6>
                   </div>
-                    <Button
-                      style={ { backgroundColor: '#ff6c31' } }
-                      className="btn-round"
-                      color="success"
-                      type="submit"
-                      value="Submit"
-                      size="lg"
-                    >
-                      Create an account
-                    </Button>
+                  <Button
+                    style={ { backgroundColor: '#ff6c31' } }
+                    className="btn-round"
+                    color="success"
+                    size="lg"
+                    to="/Signupassoc"
+                    tag={Link}
+                  >
+                    Create an account
+                  </Button>
                     <div className="pull-right">
                       <h6>
                         <a
