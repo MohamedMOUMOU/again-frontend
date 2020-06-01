@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -344,6 +344,8 @@ function onSubmito(event){
                       type="submit"
                       value="Submit"
                       size="lg"
+                      to ="/Loginassoc"
+                      tag={ Link }
                     >
                       Signup
                     </Button>

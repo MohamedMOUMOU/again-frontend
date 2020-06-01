@@ -130,7 +130,7 @@ function onSubmito(event){
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Association serial number..."
+                        placeholder="Association president email..."
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
