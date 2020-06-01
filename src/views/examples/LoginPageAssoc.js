@@ -68,9 +68,6 @@ function onSubmito(event){
        console.log(res);
        setToDash(true);
       } else {
-        alert("por favor, debes que trabajar: ");
-        alert(res.status);
-
         const error = new Error(res.error);
         console.log(error);
         throw error;

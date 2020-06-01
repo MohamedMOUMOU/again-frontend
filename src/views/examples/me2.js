@@ -186,6 +186,7 @@ export default function Dashboard() {
       <ExamplesNavbar />
       <main className={classes.content} style={ { marginTop: 70 } }>
         <Container maxWidth="lg" className={classes.container}>
+        <h1 className="text-center">Houses Donator DASHBOARD</h1>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>

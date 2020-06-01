@@ -72,7 +72,6 @@ function onSubmito(event){
 
        setToDash(true);
       } else {
-        alert(res.status);
         const error = new Error(res.error);
         console.log(error);
         throw error;
@@ -86,7 +85,7 @@ function onSubmito(event){
 
   return (
     <>
-    {toDash ? <Redirect to = "/index" /> : null}
+    {toDash ? <Redirect to = "/Loginassoc" /> : null}
       <ExamplesNavbar />
       <div className="page-header clear-filter" filter-color="blue">
         <div
