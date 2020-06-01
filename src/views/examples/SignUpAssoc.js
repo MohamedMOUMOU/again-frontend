@@ -329,9 +329,6 @@ function onSubmito(event){
                     </InputGroupAddon>
                     <Input
                       placeholder="Password"
-                      name="password"
-                      label="Password"
-
                       type="password"
                       onFocus={() => setLastFocus(true)}
                       onBlur={() => setLastFocus(false)}

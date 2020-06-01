@@ -124,6 +124,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardBody>
               <h4 className={classes.cardTitle}>Applications remaining</h4>
+              <h5>You have earned <span style={ { color: '#ff6c31' } }>200</span> tokens last week.</h5>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
