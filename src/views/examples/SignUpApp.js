@@ -278,23 +278,6 @@ function onSubmito(event){
                         (firstFocus ? " input-group-focus" : "")
                       }
                     >
-
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="now-ui-icons text_caps-small"></i>
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      placeholder="Password"
-                      type="text"
-                      onFocus={() => setFirstFocus(true)}
-                      onBlur={() => setFirstFocus(false)}
-                      name = "email"
-                      //value={objLogin.email}
-                      onChange={handleInputChange}
-
-                    ></Input>
-                    </InputGroup>
                     <Button
                       style={ { backgroundColor: '#ff6c31' } }
                       className="btn-round"
