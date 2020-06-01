@@ -272,12 +272,7 @@ function onSubmito(event){
 
                     ></Input>
                     </InputGroup>
-                    <InputGroup
-                      className={
-                        "no-border input-lg" +
-                        (firstFocus ? " input-group-focus" : "")
-                      }
-                    >
+                  
                     <Button
                       style={ { backgroundColor: '#ff6c31' } }
                       className="btn-round"
