@@ -90,7 +90,6 @@ function onSubmito(event){
     .catch(err => {
       console.error(err);
       console.log(objLogin);
-      alert('Error logging in please try again');
     });
   }
 
@@ -166,6 +165,18 @@ function onSubmito(event){
           		onChange={handleInputChange}
                       ></Input>
                     </InputGroup>
+                    <Button
+                      style={ { backgroundColor: '#ff6c31' } }
+                      className="btn-round"
+                      color="success"
+                      type="submit"
+                      value="Submit"
+                      size="lg"
+                      to="/Dashboard"
+                      tag={Link}
+                    >
+                      Login
+                    </Button>
                   </CardBody>
                   <CardFooter className="text-center">
                   <div className="pull-left">
@@ -186,7 +197,7 @@ function onSubmito(event){
                       type="submit"
                       value="Submit"
                       size="lg"
-                      to="/signup"
+                      to="/Signupapp"
                       tag={Link}
                     >
                       Apply

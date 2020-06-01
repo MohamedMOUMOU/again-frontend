@@ -1,9 +1,11 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
-
+import { Link } from "react-router-dom";
+import {
+  Button
+} from "reactstrap";
 function preventDefault(event) {
   event.preventDefault();
 }
@@ -18,17 +20,19 @@ export default function Deposit() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title> Number of Hours Worked so far</Title>
-      <Typography component="p" variant="h4">
-        11 hours
-      </Typography>
-      <Typography color="textSecondary" className={classes.depositContext}>
-        Keep up the momentum!
-      </Typography>
-      <div>
-        <Link color="primary" href="/index" onClick={preventDefault}>
-          Explore Opportunities
-        </Link>
+    <div className="container">
+    <div className="row justify-content-center">
+      <span style={{ fontSize: 26,marginBottom: 20,marginTop: 10 } }><span style={ { color: '#ff6c31' } }>Add</span> another application</span> <br/>
+      <p>To submit a new application click the button bellow.</p>
+      <Button
+        style={ { backgroundColor: '#ff6c31',color: 'white',fontWeight: 'bold' } }
+        className="btn-round"
+        color="success"
+        size="lg"
+        to="/Assocapp"
+        tag={Link}
+      >Add an application</Button>
+      </div>
       </div>
     </React.Fragment>
   );

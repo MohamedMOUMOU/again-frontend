@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -108,7 +109,7 @@ function onSubmito(event){
                       ></img>
                     </div>
                   </CardHeader>
-                  <p className="text-center" style={ { margin: -10,fontWeight: 'bold',fontSize: 30 } }>Rgister as an <span style={ { color: '#ff6c31' } }>Assocation</span></p>
+                  <p className="text-center" style={ { margin: -10,fontWeight: 'bold',fontSize: 30 } }>Rgister as an <span style={ { color: '#ff6c31' } }>Applicationss reviewer</span></p>
                   <CardBody>
                   <InputGroup
                       className={
@@ -301,6 +302,8 @@ function onSubmito(event){
                       type="submit"
                       value="Submit"
                       size="lg"
+                      to="/Waitconf"
+                      tag={Link}
                     >
                       Signup
                     </Button>

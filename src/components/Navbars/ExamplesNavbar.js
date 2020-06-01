@@ -54,8 +54,7 @@ function ExamplesNavbar() {
           <div className="navbar-translate" style={{ fontSize: 25 }}>
             <img height="25" width="35" className="m-2" src={require("assets/img/logo.png")}/>
             <NavbarBrand
-              href={require("index")}
-              target="_blank"
+              href="/"
               id="navbar-brand"
             >
               Again
@@ -93,7 +92,7 @@ function ExamplesNavbar() {
             </UncontrolledTooltip>
               <NavItem id="navbar-link-2">
                 <NavLink to="/LoginHouse" tag={Link}>
-                  House holders
+                  House donators
                 </NavLink>
               </NavItem>
               <UncontrolledTooltip target="#navbar-link-2">

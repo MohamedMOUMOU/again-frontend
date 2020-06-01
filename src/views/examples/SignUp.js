@@ -49,7 +49,7 @@ function SignUp() {
                     type="submit"
                     value="Submit"
                     size="lg"
-                    to="/"
+                    to="/Signupassoc"
                     tag={Link}
                   >
                     Association
@@ -63,7 +63,7 @@ function SignUp() {
                     type="submit"
                     value="Submit"
                     size="lg"
-                    to="/Singnuphouse"
+                    to="/Signuphouse"
                     tag={Link}
                   >
                     House donater
@@ -77,6 +77,8 @@ function SignUp() {
                     type="submit"
                     value="Submit"
                     size="lg"
+                    to="/Signupapp"
+                    tag={Link}
                   >
                     Application reviewer
                   </Button>

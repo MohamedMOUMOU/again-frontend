@@ -67,7 +67,6 @@ function onSubmito(event){
        console.log(res);
        setToDash(true);
       } else {
-        alert("por favor, debes que trabajar: ");
         alert(res.status);
 
         const error = new Error(res.error);
@@ -89,13 +88,12 @@ function onSubmito(event){
     .catch(err => {
       console.error(err);
       console.log(objLogin);
-      alert('Error logging in please try again');
     });
   }
 
   return (
     <>
-    {toDash ? <Redirect to = "/me" /> : null}
+    {toDash ? <Redirect to = "/me2" /> : null}
       <ExamplesNavbar />
       <div className="page-header clear-filter" filter-color="blue">
         <div

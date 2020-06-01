@@ -20,7 +20,7 @@ import {Redirect} from "react-router";
 // core componentsct from reac
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
-var objLogin = {"fname" : "","lname" : "","stuId" : "","phoneNum" : "", "cinNum" : "", "email" : "", "password": ""};
+var objLogin = {"fname" : "","lname" : "","phoneNum" : "", "identityNum" : "", "email" : "", "password": ""};
 
 function SignUpHouse() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -54,11 +54,11 @@ function onSubmito(event){
 
     console.log("the obj ==>",objLogin);
     event.preventDefault();
-    fetch('http://localhost:4000/user/signup', {
+    fetch('https://againbackend.herokuapp.com/user/signupowner', {
       method: 'POST',
       body: JSON.stringify({fname:objLogin.fname, lname:objLogin.lname,
-        stuId:objLogin.stuId, phoneNum:objLogin.phoneNum,
-        cinNum:objLogin.cinNum,email:objLogin.email,
+    phoneNum:objLogin.phoneNum,
+        identityNum:objLogin.identityNum,email:objLogin.email,
         password: objLogin.password}),
       headers: {
         'Content-Type': 'application/json'
@@ -71,7 +71,6 @@ function onSubmito(event){
        setToDash(true);
       } else {
         alert("por favor, debes que trabajar: ");
-        alert(res.status);
         const error = new Error(res.error);
         console.log(error);
         throw error;
@@ -80,13 +79,12 @@ function onSubmito(event){
     .catch(err => {
       console.error(err);
       console.log(objLogin);
-      alert('Error logging in please try again');
     });
   }
 
   return (
     <>
-    {toDash ? <Redirect to = "/index" /> : null}
+    {toDash ? <Redirect to = "/LoginHouse" /> : null}
       <ExamplesNavbar />
       <div className="page-header clear-filter" filter-color="blue">
         <div
@@ -240,8 +238,8 @@ function onSubmito(event){
                       <Input
 
                         placeholder="CIN Number"
-                        name="cinNum"
-                        label="cinNum"
+                        name="identityNum"
+                        label="identityNum"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}

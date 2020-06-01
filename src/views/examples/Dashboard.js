@@ -1,6 +1,15 @@
- 
+
 import React, { useState, useEffect } from "react";
 import clsx from 'clsx';
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import DefaultFooter from "components/Footers/DefaultFooter.js";
+import { Link } from "react-router-dom";
+
+
+// reactstrap components
+import {
+  Button
+} from "reactstrap";
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
@@ -15,7 +24,6 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
 
 
 
@@ -25,7 +33,7 @@ import Orders from './Orders';
 
 function Copyright() {
 
-  
+
 
 
 
@@ -158,63 +166,35 @@ export default function Dashboard() {
               // An error will occur if the token is invalid.
               // If this happens, you may want to remove the invalid token.
               localStorage.removeItem("token");
-        
+
             } else {
               setUser(localStorage.user);
             }
           })
       }
-      
+
     }
 
     fetchData();
   });
-  
+
   return (
+    <div className="page-header clear-filter pr-5 pl-5" filter-color="orange">
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
-        <Toolbar className={classes.toolbar}>
-         
-          <Typography component="h1" variant="h6" background-color="inherit" noWrap className={classes.title}>
-            My Volunteering Space
-          </Typography>
-      
-         
-          
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        classes={{
-          paper: clsx(classes.drawerPaper, !open && classes.drawerPaperClose),
-        }}
-        open={open}
-      >
-        <div className={classes.toolbarIcon}>
-          <IconButton onClick={handleDrawerClose}>
-          
-          </IconButton>
-        </div>
-        <Divider />
-        <List>{mainListItems}</List>
-        <Divider />
-     
-      </Drawer>
-      <main className={classes.content}>
-        <div className={classes.appBarSpacer} />
+      <ExamplesNavbar />
+      <main className={classes.content} style={ { marginTop: 70 } }>
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
                 <div>
-              Welcome Zineb! <br/><br/>
+              <span style={{ fontSize: 30 } }>Welcome<span style={ { color: '#ff6c31' } }> Tasnim</span></span> <br/><br/>
               <ul>
-                <li> <strong> First Name:</strong> Zineb</li><br/>
-                <li><strong> Last Name:</strong> Bahri </li> <br/>
-                <li> <strong> ID:</strong> 77073</li><br/>
-                
+              <li> <strong> Association name:</strong> Ichrak</li><br/>
+                <li> <strong> First Name:</strong> Tasnim</li><br/>
+                <li><strong> Last Name:</strong> El Felah </li> <br/>
               </ul>
               </div>
               </Paper>
@@ -232,11 +212,19 @@ export default function Dashboard() {
               </Paper>
             </Grid>
           </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
+          <Button
+            style={ { backgroundColor: '#ff6c31' } }
+            className="btn-round pull-right"
+            color="success"
+            size="lg"
+            to="/"
+            tag={Link}
+          >
+          Logout
+        </Button>
         </Container>
       </main>
+    </div>
     </div>
   );
 }

@@ -14,11 +14,11 @@ function createData(id, date, name, shipTo, paymentMethod, amount) {
 }
 
 const rows = [
-  createData(0, '16 Apr, 2020', 'Translation', 'Not applicable', 'Not Applicable', "accepted"),
-  createData(1, '15 Mar, 2020', 'Tutoring', '15:00', '18:00', "realized"),
-  createData(2, '21 Mar, 2020', 'Translation', 'Not applicable', 'Not applicable', "realized"),
-  createData(3, '27 Mar, 2020', 'Tutoring', '16:00', '18:00', "realized"),
-  createData(4, '18 Feb, 2020', 'Tutoring', '13:00', '15:00', "realized"),
+  createData(0, '005', 'Association application', '31st may 2020', 'Not Applicable', "waiting evaluation"),
+  createData(1, '004', 'Association application', '09th may 2020', '13rd may 2020', "accepted"),
+  createData(2, '003', 'Association application', '24th april 2020', '28th april 2020', "refused"),
+  createData(3, '002', 'Association application', '17th march 2020', '20th march 2020', "accepted"),
+  createData(4, '001', 'Association application', '2nd junuary 2020', '7th junuary 2020', "refused"),
 ];
 
 function preventDefault(event) {
@@ -39,10 +39,10 @@ export default function Orders() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
+            <TableCell>Number</TableCell>
             <TableCell>Type</TableCell>
-            <TableCell>Start time</TableCell>
-            <TableCell>End time</TableCell>
+            <TableCell>Submission date</TableCell>
+            <TableCell>Answer date</TableCell>
             <TableCell align="right">Status</TableCell>
           </TableRow>
         </TableHead>
@@ -58,11 +58,6 @@ export default function Orders() {
           ))}
         </TableBody>
       </Table>
-      <div className={classes.seeMore}>
-        <Link color="primary" href="#" onClick={preventDefault}>
-            More Applications
-        </Link>
-      </div>
     </React.Fragment>
   );
 }

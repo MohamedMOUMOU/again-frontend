@@ -31,13 +31,18 @@ import LoginPageAssoc from "views/examples/LoginPageAssoc.js";
 import LoginPageHouse from "views/examples/LoginPageHouse.js";
 import LoginPageApp from "views/examples/LoginPageApp.js";
 import Donate from "views/examples/DonatePage.js";
+import WaitApp from "views/examples/WaitApp.js";
+import WaitConf from "views/examples/WaitConf.js";
 import SignUp from "views/examples/SignUp.js";
 import SignUpHouse from "views/examples/SignUpHouse.js";
 import SignUpAssoc from "views/examples/SignUpAssoc.js";
 import SignUpApp from "views/examples/SignUpApp.js";
 import LandingPage from "views/examples/LandingPage.js";
+import AssocApp from "views/examples/AssocApp.js";
 import ProfilePage from "views/examples/ProfilePage.js";
+import Dashboardd from "views/examples/Dashboardd.js";
 import Dashboard from "views/examples/Dashboard.js";
+import Me2 from "views/examples/me2.js";
 import Application from "views/examples/Application.js";
 
 
@@ -54,10 +59,15 @@ ReactDOM.render(
       <Route path="/Signuphouse" component={SignUpHouse} />
       <Route path="/Signupassoc" component={SignUpAssoc} />
       <Route path="/Signupapp" component={SignUpApp} />
-  	<Route path="/Donate" component={Donate} />
+      <Route path="/Assocapp" component={AssocApp} />
+      <Route path="/Donate" component={Donate} />
+      <Route path="/WaitApp" component={WaitApp} />
+  	<Route path="/Waitconf" component={WaitConf} />
     <Route path="/volunteer" component={Application} />
     <Route path="/Signup" component={SignUp} />
-     <Route path="/me" component={Dashboard} />
+    <Route path="/Dashboard" component={Dashboardd} />
+    <Route path="/me" component={Dashboard} />
+     <Route path="/me2" component={Me2} />
      <Route path="/" component={LandingPage} />
 
 

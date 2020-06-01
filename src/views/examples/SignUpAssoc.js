@@ -20,7 +20,7 @@ import {Redirect} from "react-router";
 // core componentsct from reac
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
-var objLogin = {"fname" : "","lname" : "","stuId" : "","phoneNum" : "", "cinNum" : "", "email" : "", "password": ""};
+var objLogin = {"aname" : "","pname" : "","phoneNum" : "", "associationNum" : "", "legalNum" : "","scope" : "", "description" : "", "website" : "", "email" : "", "password": ""};
 
 function SignUpAssoc() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -54,10 +54,12 @@ function onSubmito(event){
 
     console.log("the obj ==>",objLogin);
     event.preventDefault();
-    fetch('http://localhost:4000/user/signup', {
+    fetch('https://againbackend.herokuapp.com/user/signupassociation', {
       method: 'POST',
-      body: JSON.stringify({fname:objLogin.fname, lname:objLogin.lname,
-        stuId:objLogin.stuId, phoneNum:objLogin.phoneNum,
+      body: JSON.stringify({aname:objLogin.aname, pname:objLogin.pname,
+       phoneNum:objLogin.phoneNum, associationNum:objLogin.associationNum,
+	legalNum:objLogin.legalNum, scope:objLogin.scope, description:objLogin.description,
+	website:objLogin.website,
         cinNum:objLogin.cinNum,email:objLogin.email,
         password: objLogin.password}),
       headers: {
@@ -70,7 +72,6 @@ function onSubmito(event){
 
        setToDash(true);
       } else {
-        alert("por favor, debes que trabajar: ");
         alert(res.status);
         const error = new Error(res.error);
         console.log(error);
@@ -80,7 +81,6 @@ function onSubmito(event){
     .catch(err => {
       console.error(err);
       console.log(objLogin);
-      alert('Error logging in please try again');
     });
   }
 
@@ -124,8 +124,8 @@ function onSubmito(event){
                       <Input
 
                         placeholder="Association name"
-                        name="fname"
-                        label="fname"
+                        name="aname"
+                        label="aname"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -170,8 +170,8 @@ function onSubmito(event){
                       <Input
 
                         placeholder="Association president name"
-                        name="lname"
-                        label="lname"
+                        name="pname"
+                        label="pname"
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -179,6 +179,7 @@ function onSubmito(event){
 
                       ></Input>
                     </InputGroup>
+
                     <InputGroup
                       className={
                         "no-border input-lg" +
@@ -192,34 +193,11 @@ function onSubmito(event){
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="President Email"
+                      placeholder="Association President phone number"
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
-                      name = "email"
-                      //value={objLogin.email}
-                      onChange={handleInputChange}
-
-                    ></Input>
-                    </InputGroup>
-                    <InputGroup
-                      className={
-                        "no-border input-lg" +
-                        (firstFocus ? " input-group-focus" : "")
-                      }
-                    >
-
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <i className="now-ui-icons users_circle-08"></i>
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input
-                      placeholder="Association president phone number"
-                      type="text"
-                      onFocus={() => setFirstFocus(true)}
-                      onBlur={() => setFirstFocus(false)}
-                      name = "email"
+                      name = "phoneNum"
                       //value={objLogin.email}
                       onChange={handleInputChange}
 
@@ -242,8 +220,8 @@ function onSubmito(event){
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
-                      name = "email"
-                      //value={objLogin.email}
+                      name = "legalNum"
+
                       onChange={handleInputChange}
 
                     ></Input>
@@ -265,8 +243,8 @@ function onSubmito(event){
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
-                      name = "email"
-                      //value={objLogin.email}
+                      name = "scope"
+
                       onChange={handleInputChange}
 
                     ></Input>
@@ -288,8 +266,8 @@ function onSubmito(event){
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
-                      name = "email"
-                      //value={objLogin.email}
+                      name = "description"
+
                       onChange={handleInputChange}
 
                     ></Input>
@@ -311,7 +289,7 @@ function onSubmito(event){
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
-                      name = "email"
+                      name = "website"
                       //value={objLogin.email}
                       onChange={handleInputChange}
 
@@ -333,10 +311,34 @@ function onSubmito(event){
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
-                      name = "email"
+                      name = "associationNum"
                       //value={objLogin.email}
                       onChange={handleInputChange}
 
+                    ></Input>
+                    </InputGroup>
+  		<InputGroup
+                    className={
+                      "no-border input-lg" +
+                      (lastFocus ? " input-group-focus" : "")
+                    }
+                    >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons text_caps-small"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Password"
+                      name="password"
+                      label="Password"
+
+                      type="password"
+                      onFocus={() => setLastFocus(true)}
+                      onBlur={() => setLastFocus(false)}
+                      name = "password"
+
+                    onChange={handleInputChange}
                     ></Input>
                     </InputGroup>
                     <Button
