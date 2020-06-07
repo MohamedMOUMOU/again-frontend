@@ -109,7 +109,7 @@ function onSubmito(event){
           <Container>
             <Col className="m-auto" md="7">
               <p className="text-center" style={ { paddingTop:80,fontWeight: 'bold',fontSize: 50 } }><span style={ { color: '#ff6c31' } }>Donate</span> Money</p>
-              <p>Donating money keep our services alive. By donating your we can pay our application reviewers and provide many jobs.<br/>Donate money and help people from around the world.</p>
+              <p>Donating money keep our services alive. By donating we can pay our applications' reviewers and provide many jobs.<br/>Donate money and help people from around the world.</p>
               <Button
                 style={ { backgroundColor: '#ff6c31' } }
                 className="btn-round"
